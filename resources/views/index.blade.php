@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="assets/libs/font-awesome-5.14.0/css/all.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
@@ -45,8 +46,8 @@
         <div class="container h100">
             <div class="contentBox h100">
                 <div>
-                    <h1 class="display-4">Организуй свой праздник вместе с EVENT</h1>
-                    <p class="lead">Развлекательные сервисы на любой вкус и бюджет. Помощь менеджера в организации.
+                    <h1 class="display-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">Организуй свой праздник вместе с EVENT</h1>
+                    <p class="lead" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">Развлекательные сервисы на любой вкус и бюджет. Помощь менеджера в организации.
                          Удобный планировщик для контроля сроков подготовки и приятные бонусы</p>
                 </div>
             </div>
@@ -57,15 +58,15 @@
             <div class="row">
                 <div class="offset-sm-2 col-sm-8">
                     <div class="headerText text-center">
-                        <h2>Сервисы</h2>
-                        <p>
+                        <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">Сервисы</h2>
+                        <p  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
                             Определяй необходимые услуги для своего мероприятия, выбирай подходящих поставщиков услуг, добавляй их на свою доску и моделируй свой event здесь и сейчас.
                         </p>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="swiper-container">
+                <div class="swiper-container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                         <a href="#">
@@ -109,11 +110,11 @@
         <div class="container h100">
             <div class="contentBox h100">
                 <div>
-                    <h2>Создай свой event профессионально</h2>
-                    <p>
+                    <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">Создай свой event профессионально</h2>
+                    <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
                         Определись с главным, а остальное сделает наш менеджер. Выбирай event-консультанта и он организует мероприятие до мелочей.
                     </p>
-                    <a href="#" class="btn btnD1">Заказать праздник</a>
+                    <a href="#" class="btn btnD1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">Заказать праздник</a>
                 </div>
             </div>
         </div>
@@ -123,8 +124,8 @@
             <div class="row">
                 <div class="offset-sm-2 col-sm-8">
                     <div class="headerText">
-                        <h2>Менеджеры</h2>
-                        <p>
+                        <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">Менеджеры</h2>
+                        <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
                             Что может быть проще? Выбирай сервисы и подключай менеджера. Рутинные звонки, коммуникации, составление графиков
                             и контроль соблюдения сроков - этими навыками в совершенстве владеют наши event-консультанты. Заказывай услуги и наслаждайся
                             ожиданием своего мероприятия
@@ -165,7 +166,7 @@
                 </div>
             </div> -->
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-6" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
                     <div class="cardPost">
                         <div class="imgBx">
                             <img src="assets/images/menagers/menager1.jpg" alt="First" class="img-fluid">
@@ -176,7 +177,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="750">
                     <div class="cardPost">
                         <div class="imgBx">
                             <img src="assets/images/menagers/menager1.jpg" alt="First" class="img-fluid">
@@ -187,7 +188,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
                     <div class="cardPost">
                         <div class="imgBx">
                             <img src="assets/images/menagers/menager1.jpg" alt="First" class="img-fluid">
@@ -198,7 +199,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1250">
                     <div class="cardPost">
                         <div class="imgBx">
                             <img src="assets/images/menagers/menager1.jpg" alt="First" class="img-fluid">
@@ -256,15 +257,15 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="headerText2 text-center">
-                        <h2>Напиши нам</h2>
-                        <p>Есть вопросы по организации ресурса? Нужна помощь или проводник по сайту? Наши менеджеры ответят в течении 10 минут
+                        <h2  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">Напиши нам</h2>
+                        <p  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">Есть вопросы по организации ресурса? Нужна помощь или проводник по сайту? Наши менеджеры ответят в течении 10 минут
                         </p>
                     </div>
                 </div>
             </div>
             <div class="row clearfix">
                 <div class="offset-sm-2 col-sm-8">
-                    <form>
+                    <form  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
                         <div class="form-group">
                             <label for="name">Имя</label>
                             <input type="text" id="name" name="" class="form-control">
@@ -282,7 +283,7 @@
                             <textarea name="" id="message" cols="30" rows="10" class="form-control textarea"></textarea>
                         </div>
                         <div class="form-group text-center">
-                            <button class="btn btnD1">Отправить</button>
+                            <button class="btn btnD2">Отправить</button>
                         </div>
                     </form>
                 </div>
@@ -318,6 +319,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script>
     $(document).scroll(function() {
         $('.navbar').toggleClass('scrolled', $(this).scrollTop() > $('.navbar').height());

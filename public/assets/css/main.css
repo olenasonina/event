@@ -58,8 +58,7 @@ p {
 }
 
 .banner::before,
-.sec2::before,
-.contact::before {
+.sec2::before {
     content: '';
     position: absolute;
     top: 0;
@@ -70,9 +69,19 @@ p {
     pointer-events: none;
 }
 
+.contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 700px;
+    background: linear-gradient(#777, transparent);
+    pointer-events: none;
+}
+
 .banner::after,
-.sec2::after,
-.contact::after {
+.sec2::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -82,6 +91,17 @@ p {
     background: linear-gradient(360deg, #000, transparent);
     pointer-events: none;
 }
+
+/* .contact::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 700px;
+    background: linear-gradient(360deg, #000, transparent);
+    pointer-events: none;
+} */
 
 .height100p {
     height: 100vh;
@@ -96,7 +116,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 200px;
+    padding-bottom: 100px;
     text-align: center;
     z-index: 10;
 }
@@ -241,7 +261,7 @@ p {
     position: relative;
     margin: 0;
     padding: 10px;
-    background: rgba(0,0,0,0.9);
+    background: rgba(0,0,0,0.7);
     color: #fff;
     font-size: 20px;
     font-weight: 600;
@@ -255,7 +275,7 @@ p {
 }
 
 .headerText2 {
-    color: #fff;
+    color: #000;
 }
 
 .headerText2 h2 {
@@ -283,13 +303,15 @@ p {
     border-bottom: 2px solid rgba(255,255,255,0.2);
     height: 50px;
     border-radius: 0;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.5);
     color: #fff;
     font-size: 1.25rem;
 }
 
 .contact .form-control:focus,
-.contact .form-control:hover {
+.contact .form-control:hover,
+.textarea:focus,
+.textarea:hover {
     border: none;
     outline: none;
     border-bottom: 2px solid rgba(255,255,255,1);
@@ -301,8 +323,20 @@ p {
 }
 
 .contact label {
-    color: #fff;
+    color: #000;
     font-size: 1.25rem;
+}
+
+.btnD2,
+.btnD2:hover {
+    background: #262626;
+    color: #fff;
+    border-radius: 50px;
+    padding: 15px 50px;
+    font-size: 1.15rem;
+    outline: none;
+    font-weight: 500;
+    margin-top: 20px;
 }
 
 
@@ -344,3 +378,64 @@ footer {
 .cpryte a:hover {
     color: #fff;
 }
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-light .nav-link {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .navbar-light .navbar-toggler {
+        background: #fff;
+        border-radius: 0;
+    }
+    .banner {
+        min-height: 100vh;
+        padding: 100px 0;
+    }
+    .contentBox {
+        padding-bottom: 50px;
+    }
+    .contentBox h1,
+    .sec2 h2 {
+        font-size: 2rem;
+    }
+    .contentBox p,
+    .sec2 p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar-light .navbar-toggler {
+        background: #fff;
+        border-radius: 0;
+    }
+    .banner {
+        min-height: 100vh;
+        padding: 100px 0;
+    }
+    .contentBox {
+        padding-bottom: 10px;
+    }
+    .contentBox h1,
+    .sec2 h2 {
+        font-size: 1.5rem;
+    }
+    .contentBox p,
+    .sec2 p {
+        font-size: 1rem;
+    }
+    .contact .form-control,
+    .contact .textarea {
+        height: 40px;
+        border: 1px solid #fff;
+    }
+    .navbar-expand-lg .navbar-light .nav-link {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+

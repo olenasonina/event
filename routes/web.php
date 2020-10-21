@@ -15,8 +15,14 @@ use App\Http\Controllers\MainController;
 */
 
 
-Route::get('/', [ MainController::class, 'index' ]);
+Route::get('/', [ MainController::class, 'index' ])->name('index');
 
-Route::get('/services', [ MainController::class, 'show_services' ]);
+Route::get('/services', [ MainController::class, 'show_services' ])->name('show_services');
 
+Route::get('/services/{service_category?}', [ MainController::class, 'show_service_category' ])->name('show_service_category');
 
+Route::get('/services/{service_category}/{service?}', [ MainController::class, 'show_one_service' ])->name('show_one_service');
+
+Route::get('/my_projects', [ MainController::class, 'show_projects' ])->name('show_projects');
+
+Route::get('/my_projects/{name?}', [ MainController::class, 'show_one_project' ])->name('show_one_project');

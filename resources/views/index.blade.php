@@ -30,37 +30,9 @@
             <div class="row">
                 <div class="swiper-container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                        <a href="#">
-                            <img src="assets/images/swiper/cafe.jpg" alt="">
-                        </a>
-                        <p>Кафе</p>   
-                        </div>
-                        <div class="swiper-slide">
-                        <a href="#">
-                            <img src="assets/images/swiper/restrant.jpg" alt="">
-                        </a>
-                        <p>Рестораны</p>
-                        </div>
-                        <div class="swiper-slide">
-                        <a href="#">
-                            <img src="assets/images/swiper/tamada.jpg" alt="">
-                        </a>
-                        <p>Ведущие</p>
-                        </div>
-                        <div class="swiper-slide">
-                        <a href="#">
-                            <img src="assets/images/swiper/animator.jpg" alt="">
-                        </a>
-                        <p>Аниматоры</p>
-                        </div>
-                        <div class="swiper-slide">Slide 4</div>
-                        <div class="swiper-slide">Slide 5</div>
-                        <div class="swiper-slide">Slide 6</div>
-                        <div class="swiper-slide">Slide 7</div>
-                        <div class="swiper-slide">Slide 8</div>
-                        <div class="swiper-slide">Slide 9</div>
-                        <div class="swiper-slide">Slide 10</div>
+                    @foreach ($service_cats as $cat)
+                        @include ('components.cat_slider', compact('cat'))
+                    @endforeach
                     </div>
                     <!-- Add Pagination -->
                     <div class="swiper-pagination"></div>
@@ -96,18 +68,21 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-6" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+                @foreach ($managers as $manager)
+                    @include ('components.manager_card', compact('manager'))
+                @endforeach
+                <!-- <div class="col-sm-4" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
                     <div class="cardPost">
                         <div class="imgBx">
-                            <img src="assets/images/menagers/menager1.jpg" alt="First" class="img-fluid">
+                            <img src="assets/images/managers/menager1.jpg" alt="First" class="img-fluid">
                         </div>
                         <div class="content">
                             <h3>Елена</br>
                             <span>Конференции и бизнес-встречи</span></h3>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="750">
+                </div> -->
+                <!-- <div class="col-sm-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="750">
                     <div class="cardPost">
                         <div class="imgBx">
                             <img src="assets/images/menagers/menager1.jpg" alt="First" class="img-fluid">
@@ -118,7 +93,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
+                <div class="col-sm-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
                     <div class="cardPost">
                         <div class="imgBx">
                             <img src="assets/images/menagers/menager1.jpg" alt="First" class="img-fluid">
@@ -129,7 +104,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1250">
+                <div class="col-sm-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1250">
                     <div class="cardPost">
                         <div class="imgBx">
                             <img src="assets/images/menagers/menager1.jpg" alt="First" class="img-fluid">
@@ -139,7 +114,7 @@
                             <span>Something else</span></h3>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>

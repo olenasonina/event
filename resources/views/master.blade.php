@@ -105,10 +105,10 @@
           slidesPerView: 3,
           spaceBetween: 40,
         },
-        '@1.50': {
-          slidesPerView: 4,
-          spaceBetween: 50,
-        },
+        // '@1.50': {
+        //   slidesPerView: 4,
+        //   spaceBetween: 50,
+        // },
       }
     });
   </script>

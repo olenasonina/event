@@ -3,11 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Service_cat;
+use App\Models\Manager;
 
 class MainController extends Controller
 {
     public function index() {
-        return view('index');
+        $service_cats = Service_cat::get();
+        $managers = Manager::get();
+        return view('index', ['service_cats' => $service_cats, 'managers' => $managers]);
     }
 
     public function show_services() {

@@ -12,4 +12,15 @@ class Event extends Model
     public function services() {
         return $this->belongsToMany('App\Models\Service');
     }
+
+    public function saveEvent() {
+        if($this->status == 0) {
+            $this->status == 1;
+            $this->save();
+            // session()->forget('eventId');
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

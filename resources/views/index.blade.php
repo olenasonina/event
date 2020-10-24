@@ -48,7 +48,7 @@
                     <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
                         Определись с главным, а остальное сделает наш менеджер. Выбирай event-консультанта и он организует мероприятие до мелочей.
                     </p>
-                    <a href="#" class="btn btnD1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">Заказать праздник</a>
+                    <a href="{{ route('show_services') }}" class="btn btnD1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">Заказать праздник</a>
                 </div>
             </div>
         </div>
@@ -74,7 +74,7 @@
             </div>
         </div>
     </section>
-    <section class="contact" id="contact">
+    <!-- <section class="contact" id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
@@ -111,5 +111,5 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
  @endsection   

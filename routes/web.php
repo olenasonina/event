@@ -29,3 +29,5 @@ Route::get('/event', [ EventController::class, 'show_project' ])->name('show_pro
 Route::get('/event/{id?}', [ EventController::class, 'show_one_project' ])->name('show_one_project');
 
 Route::post('/event/add/{id}', [ EventController::class, 'project_add' ])->name('project_add');
+
+Route::post('/event/remove/{id}', [ EventController::class, 'project_remove' ])->name('project_remove');

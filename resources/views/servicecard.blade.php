@@ -24,7 +24,11 @@
                 <h6 class="card-title my-4">Контактный телефон: {{$service->service_phone}}</h6>
                 <h6 class="card-title my-4">Особенные характеристики: {{$service->service_characters}}</h6>
                 <h6 class="card-title my-4">Стоимость: {{$service->service_price}} {{$service->service_val}} за {{$service->service_price_desc}}</h6>
-                <a href="#" class="btn btn-secondary">Добавить в EVENT</a>
+                <form action="{{ route('project_add', $service) }}" method="POST">
+                    <button type="submit" class="btn btn-secondary" role="button">Добавить в EVENT</button>
+                    @csrf
+                </form>
+                
                 <!-- @if(Auth::id()==1)
                 
                 <form action="{{ route('changeStatus', $item->id)}}" method="GET" class="py-4">

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\EventController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +24,8 @@ Route::get('/services/{service_category?}', [ MainController::class, 'show_servi
 
 Route::get('/services/{service_category}/{service?}', [ MainController::class, 'show_one_service' ])->name('show_one_service');
 
-Route::get('/my_projects', [ MainController::class, 'show_projects' ])->name('show_projects');
+Route::get('/event', [ EventController::class, 'show_project' ])->name('show_project');
 
-Route::get('/my_projects/{name?}', [ MainController::class, 'show_one_project' ])->name('show_one_project');
+Route::get('/event/{id?}', [ EventController::class, 'show_one_project' ])->name('show_one_project');
 
+Route::post('/event/add/{id}', [ EventController::class, 'project_add' ])->name('project_add');

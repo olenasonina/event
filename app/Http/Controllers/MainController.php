@@ -30,15 +30,6 @@ class MainController extends Controller
 
     public function show_one_service($service_category, $service_code = null) {
         $service = Service::where('service_code', $service_code)->first();
-        // dd($service);
         return view('servicecard', ['service' => $service]);
-    }
-
-    public function show_projects() {
-        //
-    }
-
-    public function show_one_project($name = null) {
-        //
     }
 }

@@ -71,50 +71,6 @@
                 @foreach ($managers as $manager)
                     @include ('components.manager_card', compact('manager'))
                 @endforeach
-                <!-- <div class="col-sm-4" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
-                    <div class="cardPost">
-                        <div class="imgBx">
-                            <img src="assets/images/managers/menager1.jpg" alt="First" class="img-fluid">
-                        </div>
-                        <div class="content">
-                            <h3>Елена</br>
-                            <span>Конференции и бизнес-встречи</span></h3>
-                        </div>
-                    </div>
-                </div> -->
-                <!-- <div class="col-sm-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="750">
-                    <div class="cardPost">
-                        <div class="imgBx">
-                            <img src="assets/images/menagers/menager1.jpg" alt="First" class="img-fluid">
-                        </div>
-                        <div class="content">
-                            <h3>Some</br>
-                            <span>Something else</span></h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
-                    <div class="cardPost">
-                        <div class="imgBx">
-                            <img src="assets/images/menagers/menager1.jpg" alt="First" class="img-fluid">
-                        </div>
-                        <div class="content">
-                            <h3>Some</br>
-                            <span>Something else</span></h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1250">
-                    <div class="cardPost">
-                        <div class="imgBx">
-                            <img src="assets/images/menagers/menager1.jpg" alt="First" class="img-fluid">
-                        </div>
-                        <div class="content">
-                            <h3>Some</br>
-                            <span>Something else</span></h3>
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </div>
     </section>

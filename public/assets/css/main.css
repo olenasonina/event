@@ -398,6 +398,24 @@ footer {
     color: #fff;
 }
 
+.my-categorylink {
+    color:black;
+    font-weight: 300;
+}
+
+.my-categorylink:hover,
+.my-categorylink:focus,
+.my-categorylink:visited {
+    color:black;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .template {
+        flex-direction: column;
+    }
+}
+
 @media (min-width: 992px) {
     .navbar-expand-lg .navbar-light .nav-link {
         padding-left: 1rem;

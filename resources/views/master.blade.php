@@ -32,9 +32,6 @@
                             <a class="nav-link" href="#link2">Менеджеры</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#link3">Контакты</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="#contact">Вход/Регистрация</a>
                         </li>
                     </ul>

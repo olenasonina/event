@@ -26,3 +26,4 @@ Route::get('/services/{service_category}/{service?}', [ MainController::class, '
 Route::get('/my_projects', [ MainController::class, 'show_projects' ])->name('show_projects');
 
 Route::get('/my_projects/{name?}', [ MainController::class, 'show_one_project' ])->name('show_one_project');
+

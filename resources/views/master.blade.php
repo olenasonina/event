@@ -29,10 +29,16 @@
                             <a class="nav-link" href="{{ route('show_services') }}">Сервисы</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#link2">Менеджеры</a>
+                            <a class="nav-link" href="{{ route('show_managers') }}">Менеджеры</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#contact">Вход/Регистрация</a>
+                            <a class="nav-link" href="{{ route('show_project') }}">EVENT</a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="nav-link">
+                                <a class="" href="{{ route('register') }}">Регистрация /</a>
+                                <a class="" href="{{ route('login') }}">Вход</a>
+                            </div>                            
                         </li>
                     </ul>
                 </div>

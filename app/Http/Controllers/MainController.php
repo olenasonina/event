@@ -32,4 +32,9 @@ class MainController extends Controller
         $service = Service::where('service_code', $service_code)->first();
         return view('servicecard', ['service' => $service]);
     }
+
+    public function show_managers() {
+        $managers = Manager::get();
+        return view('managers', ['managers' => $managers]);
+    }
 }

@@ -1,6 +1,6 @@
 @extends('master')
 
-@section('title', 'AdminCategories')
+@section('title', 'AdminServices')
 
 @section('content')
     <div class="main" id="home">
@@ -11,34 +11,38 @@
     <div class="container">
         <div class="row">
             <div class="col-12" style="min-height: 100vh">
-                <h1>Категории</h1>
+                <h1>Сервисы</h1>
                 <table class="table table-striped">                    
                     <thead>
                         <tr>
                             <th>#</th>
                             <th>Код</th>
                             <th>Название</th>
+                            <th>Категория</th>
                             <th>Действия</th>
                         </tr>
                     </thead>
                     <tbody>
-                    @foreach($cats as $cat)
+                    @foreach($servs as $serv)
                     
                     <tr>
                         <td style="vertical-align: baseline;">
-                            {{$cat->id}}
+                            {{$serv->id}}
                         </td>
                         <td style="vertical-align: baseline;">
-                            {{$cat->cat_code}}
+                            {{$serv->service_code}}
                         </td>
                         <td style="vertical-align: baseline;">
-                            {{$cat->cat_name}}
+                            {{$serv->service_name}}
+                        </td>
+                        <td style="vertical-align: baseline;">
+                           {{$serv->category->cat_name}}
                         </td>
                         <td>
                             <div class="btn-group" role="group">
-                                <form action="{{ route('categories.destroy', $cat) }}" method="POST">
-                                    <a class= "btn btn-success" type="button" href="{{ route('categories.show', $cat) }}">Открыть</a>
-                                    <a class= "btn btn-info" type="button" href="{{ route('categories.edit', $cat) }}">Редактировать</a>
+                                <form action="{{ route('services.destroy', $serv) }}" method="POST">
+                                    <a class= "btn btn-success" type="button" href="{{ route('services.show', $serv) }}">Открыть</a>
+                                    <a class= "btn btn-info" type="button" href="{{ route('services.edit', $serv) }}">Редактировать</a>
                                     @csrf
                                     @method('DELETE')
                                     <input type="submit" class="btn btn-danger" value="Удалить">
@@ -49,7 +53,7 @@
                     @endforeach
                     </tbody>
                 </table>
-                <a class= "btn btn-success mb-3" type="button" href="{{ route('categories.create') }}">Создать новый сервис</a>
+                <a class= "btn btn-success mb-3" type="button" href="{{ route('services.create') }}">Создать новый сервис</a>
             </div>
         </div>
     </div>

@@ -5,6 +5,7 @@ use App\Http\Controllers\MainController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\ServiceController;
 use Laravel\Fortify\Http\Controllers\AuthenticatedSessionController;;
 
 /*
@@ -31,8 +32,9 @@ Route::group([
     Route::get('/', [ HomeController::class, 'index'])->name('home');
     Route::resource('categories', CategoryController::class)->only([
         'index', 'show', 'create', 'store', 'edit', 'destroy', 'update'
-    ])->names([
-        'show' => 'categories.show'
+    ]);
+    Route::resource('services', ServiceController::class)->only([
+        'index', 'show', 'create', 'store', 'edit', 'destroy', 'update'
     ]);
 });
 

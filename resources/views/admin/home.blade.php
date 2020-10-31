@@ -8,7 +8,7 @@
             <div class="contentBox h100"></div>
         </div>
     </div>
-    <div class="container">
-    ТУТ ФУНКЦИОНАЛ АДМИНИСТРАТОРА
+    <div class="container" style="min-height: 100vh">
+    ТУТ ФУНКЦИОНАЛ АДМИНИСТРАТОРА. ВОЗМОЖНО КАЛЕНДАРЬ. ИЛИ ЗАДАЧНИК
     </div>
 @endsection

@@ -25,9 +25,15 @@
                         <li class="nav-item active">
                             <a class="nav-link" href="{{ route('index') }}">Home <span class="sr-only">(current)</span></a>
                         </li>
+                        @if(Auth::user()->isAdmin())
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('services.index') }}">Сервисы</a>
+                        </li>
+                        @else
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('show_services') }}">Сервисы</a>
                         </li>
+                        @endif
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('show_managers') }}">Менеджеры</a>
                         </li>

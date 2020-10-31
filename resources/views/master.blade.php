@@ -32,9 +32,15 @@
                             <a class="nav-link" href="{{ route('show_managers') }}">Менеджеры</a>
                         </li>
                         @auth
+                        @if(Auth::user()->isAdmin())
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('categories.index') }}">Категории</a>
+                        </li>
+                        @else
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('show_project') }}">EVENT</a>
                         </li>
+                        @endif
                         @endauth
                         <li class="nav-item">
                             <div class="nav-link">

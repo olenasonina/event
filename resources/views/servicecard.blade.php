@@ -29,22 +29,7 @@
                     @csrf
                 </form>
                 
-                <!-- @if(Auth::id()==1)
-                
-                <form action="{{ route('changeStatus', $item->id)}}" method="GET" class="py-4">
-                    @csrf
-                    <label for="status">Изменение статуса сообщения:</label>
-                    <select class="my-3" name="status" id="status">
-                        <option value="">Choose...</option>
-                        @forelse ($statuses as $status)
-                        <option value="{{$status->id}}">{{$status->name}}</option>
-                        @empty
-                        <p>Статусы отсутствуют</p>
-                        @endforelse
-                    </select>
-                    <button type="submit" class="btn btn-primary">Изменить статус сообщения</button>
-                </form>
-                @endif -->
+            
             </div>
         </div>
     </div>

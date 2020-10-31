@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\HomeController;
+use Laravel\Fortify\Http\Controllers\AuthenticatedSessionController;;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +19,12 @@ use App\Http\Controllers\EventController;
 
 
 Route::get('/', [ MainController::class, 'index' ])->name('index');
+
+Route::get('/logout', [ AuthenticatedSessionController::class, 'destroy' ])->name('get-logout');
+
+Route::group(['middleware' => 'auth', 'middleware' => 'is_admin'], function() {
+    Route::get('/admin', [ HomeController::class, 'index'])->name('home');
+});
 
 Route::get('/services', [ MainController::class, 'show_services' ])->name('show_services');
 

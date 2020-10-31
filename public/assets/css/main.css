@@ -462,6 +462,13 @@ footer {
     white-space: normal;
 }
 
+.alert {
+    position: absolute;
+    z-index: 10000;
+    left: 0;
+    top: 100px;
+}
+
 @media (max-width: 768px) {
     .template {
         flex-direction: column;

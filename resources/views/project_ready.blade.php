@@ -1,6 +1,6 @@
 @extends('master')
 
-@section('title', 'My')
+@section('title', 'MyEvent')
 
 @section('content')
 

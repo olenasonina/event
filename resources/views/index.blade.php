@@ -2,10 +2,10 @@
 
 @section('title', 'Главная')
 
-@section('content')
 
     <div class="jumbotron jumbotron-fluid height100p banner" id="home">
         <div class="container h100">
+        @section('content')
             <div class="contentBox h100">
                 <div>
                     <h1 class="display-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">Организуй свой праздник вместе с EVENT</h1>

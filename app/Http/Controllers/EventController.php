@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use Session;
 use Illuminate\Http\Request;
 use App\Models\Event;
+use App\Models\Service;
+use Illuminate\Support\Facades\Auth;
 
 class EventController extends Controller
 {
@@ -13,7 +16,7 @@ class EventController extends Controller
             $event = Event::findOrFail($eventId);
         }
         return view('project', compact('event'));
-        // return view('project');
+        
     }
 
     public function show_one_project($id = null) {
@@ -42,21 +45,29 @@ class EventController extends Controller
         }
         $event->services()->attach($serviceId);
         
+        if(Auth::check()) {
+            $event->user_id = Auth::id();
+            $event->save();
+        }
+
+        $service = Service::find($serviceId);
+        session()->flash('success', 'Добавлен сервис ' . $service->service_name);
         return redirect()->route('show_project');
-        // return view('project', compact('event'));
+        
     }
 
     public function project_remove($serviceId) {
         $eventId = session('eventId');
         if(is_null($eventId)) {
             return redirect()->route('show_project');
-            // return view('project', compact('event'));
+            
         }
         $events = Event::all();
         $event =  $events->find($eventId);
         $event->services()->detach($serviceId);
+        $service = Service::find($serviceId);
+        session()->flash('success', 'Удален сервис ' . $service->service_name);
 
         return redirect()->route('show_project');
-        // return view('project', compact('event'));
     }
 }

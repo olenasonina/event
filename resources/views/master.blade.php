@@ -31,13 +31,24 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('show_managers') }}">Менеджеры</a>
                         </li>
+                        @auth
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('show_project') }}">EVENT</a>
                         </li>
+                        @endauth
                         <li class="nav-item">
                             <div class="nav-link">
+                            @guest
                                 <a class="" href="{{ route('register') }}">Регистрация /</a>
                                 <a class="" href="{{ route('login') }}">Вход</a>
+                            @endguest
+                                
+                            @auth
+                                @if(Auth::user()->isAdmin())
+                                <a class="" href="{{ route('home') }}">Панель администратора</a>
+                                @endif
+                                <a class="" href="{{ route('logout') }}">Выход</a>
+                            @endauth
                             </div>                            
                         </li>
                     </ul>
@@ -45,7 +56,12 @@
             </div>
           </nav>
     </header>
-    
+    @if (session('warning'))
+    <div class="alert alert-warning mt-2 text-center w-100">{{ session('warning') }}</div>
+    @endif
+    @if (session('success'))
+    <div class="alert alert-success mt-2 text-center w-100">{{ session('success') }}</div>
+    @endif
     @yield('content')
 
     <footer>
